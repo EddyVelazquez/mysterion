@@ -1,465 +1,257 @@
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  background-image: url("../images/Mysterion_2.png");
-  background-repeat: no-repeat;
-  background-size: 400px;
-  background-position-x: 440px;
-
+	background-image: url("../images/rain.gif");
+	height: 768px;
+background-size: cover;
+	background-repeat: no-repeat;
 }
 
-
-.question {
-  position: relative;
-  top: 30px;
-  margin: 0 auto;
-  z-index: -1;
-  width: 70px;
-  height: 70px;
-  animation-name: bounce;
-
-}
-.start{
-  position: absolute;
-  top:4px;
-;
-  background-color: green;
-
-  width: 20px;
-  height: 30px;
-  border-radius: 30%;
-  transform: rotateZ(-35deg);
-}
-.second{
-  position: absolute;
-  top:-10px;
-  left: -10px;
-  background-color: green;
-
-  width: 60px;
-  height: 20px;
-  border-radius: 30%;
-  transform: rotateZ(-35deg);
-}
-.third{
-  position: absolute;
-  top:-20px;
-  left: 45px;
-  background-color: green;
-
-  width: 20px;
-  height: 60px;
-  border-radius: 30%;
-  transform: rotateZ(-35deg);
-}
-
-.fourth{
-  position: absolute;
-  top:30px;
-  left: 25px;
-  background-color: green;
-  width: 50px;
-  height: 20px;
-  border-radius: 30%;
-  transform: rotateZ(-35deg);
-}
-.fifth{
-  position: absolute;
-  top:55px;
-  left: 15px;
-  background-color: green;
-  width: 45px;
-  height: 20px;
-  border-radius: 30%;
-  transform: rotateZ(90deg);
-}
-
-.point{
-  position: absolute;
-  top:100px;
-  left: 28px;
-  background-color: green;
-  z-index: -1;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  transform: rotateZ(90deg);
+.character {
+	position: relative;
+	top:150px;
+	width: 100%;
+	margin: 0 auto;
+/*	background-image: url("../images/Mysterion_2.png");*/
+	background-size: 400px;
+	height: 500px;
+	background-repeat: no-repeat;
+	background-position: 80px;
+	transform: scale();
 }
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++top*/
+
+.symbol {
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	left: 230px;
+	margin: 0 auto;
+	background-image: url("../images/symbolsvg.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+}
+
 .hat {
-  position: relative;
-  top: 90px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background-color: purple;
-  cursor: hand;
-  height: 280px;
-  width: 270px;
-  transform: rotateZ(35deg);
-
+	top: 60px;
+	left: 150px;
+	position: absolute;
+	background-image: url("../images/capucha.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 330px;
+	height: 330px;
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++face*/
+.face{
+	position: absolute;
+	top:100px;
+	left:190px;
+	width: 270px;
+	height: 270px;
+	background-color: #e1b692;
+	border-radius: 50%;
 }
 
-.hat-inner {
-  position: absolute;
-  top: -7px;
-  left: -22px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background-color: transparent;
-  border: solid 35px purple;
-  height: 220px;
-  width: 220px;
-  box-shadow: 5px 5px 15px black;
-
+.mask{
+	top: 110px;
+	left: 195px;
+	position: absolute;
+	background-image: url("../images/mask.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 240px;
+	height: 200px;
 }
 
-.hat-inner-top {
-  position: absolute;
-  top: 30px;
-  right: 100px;
-  height: 40px;
-  width: 110px;
-  border-radius: 50%;
-  background-color: purple;
-  transform: rotateZ(-15deg);
-  box-shadow: inset -5px -5px 5px black;
+.eyes {
+	position: absolute;
+	left: 200px;
+	top: 100px;
+	animation-name: close;
 
-}
-
-.mask-right {
-  position: absolute;
-  top: 40px;
-  right: 20px;
-  background-color: black;
-  width: 210px;
-  height: 150px;
-  border-radius: 25%;
-}
-
-.head {
-  position: absolute;
-  left: 9px;
-  top: 10px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background-color: black;
-  height: 250px;
-  width: 250px;
-  transform: rotateZ(-35deg);
 }
 
 .eye-left {
-  position: absolute;
-  top: 90px;
-  left: 60px;
-  border-radius: 50%;
-  background-color: white;
-  height: 90px;
-  width: 70px;
-  transform: rotateZ(35deg);
-  border: solid 2px black;
-  box-shadow: inset -3px 2px 5px black;
+	position: absolute;
+	top: 90px;
+	left: 60px;
+	border-radius: 50%;
+	background-color: white;
+	height: 90px;
+	width: 70px;
+	transform: rotateZ(35deg);
+	border: solid 2px black;
+	box-shadow: inset -3px 2px 5px black;
 }
 
 .eye-right {
-  position: absolute;
-  top: 90px;
-  left: 130px;
-  border-radius: 50%;
-  background-color: white;
-  height: 85px;
-  width: 65px;
-  transform: rotateZ(-30deg);
-  border: solid 2px black;
-  box-shadow: inset -3px -5px 5px black;
+	position: absolute;
+	top: 90px;
+	left: 130px;
+	border-radius: 50%;
+	background-color: white;
+	height: 85px;
+	width: 65px;
+	transform: rotateZ(-30deg);
+	border: solid 2px black;
+	box-shadow: inset -3px -5px 5px black;
 }
 
 .left-iris {
-  position: absolute;
-  top: 35px;
-  left: 45px;
-  width: 10px;
-  height: 10px;
-  background-color: black;
-  border-radius: 50%;
+	position: absolute;
+	top: 35px;
+	left: 45px;
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	border-radius: 50%;
 }
 
 .right-iris {
-  position: absolute;
-  top: 35px;
-  right: 45px;
-  width: 10px;
-  height: 10px;
-  background-color: black;
-  border-radius: 50%;
+	position: absolute;
+	top: 35px;
+	right: 45px;
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	border-radius: 50%;
 }
 
-.mask-eye-left {
-  position: absolute;
-  top: -3px;
-  left: -15px;
-  background-color: black;
-  width: 70px;
-  height: 30px;
-  transform: rotateZ(-25deg);
-
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++arms*/
+.left-arm{
+	position: absolute;
+	top:360px;
+	left: 380px;
+	width: 100px;
+	height: 100px;
 }
 
-.mask-eye-rigth {
-  position: absolute;
-  top: -5px;
-  left: 12px;
-  background-color: black;
-  width: 80px;
-  height: 30px;
-  transform: rotateZ(15deg);
-
+.left-glove{
+position: absolute;
+	top:20px;
+	left: 20px;
+	background-image: url("../images/leftglove.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 60px;
+	height: 50px;
 }
 
-.face-left {
-  position: absolute;
-  top: 190px;
-  left: 55px;
-  width: 90px;
-  height: 40px;
-  transform: skewX(30deg);
-  background-color: black;
-  border-bottom-left-radius: 50%;
-  border-top-left-radius: 20%;
+.left-hand{
+	position: absolute;
+	top:45px;
+	left: 35px;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: #636854;
+
+	border: solid 1px black;
 }
 
-.face-right {
-  position: absolute;
-  top: 190px;
-  right: 50px;
-  width: 160px;
-  height: 40px;
-  transform: skewX(-30deg);
-  background-color: blanchedalmond;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 60%;
-  border-top-right-radius: 30%;
-  border-top-left-radius: 10%;
-  box-shadow: inset 10px 5px 5px black;
-}
-
-.hat:hover .mouth {
-
-  opacity: 0.0;
-  transition-duration: 0.5s, 1.5s;
+.right-arm{
+	position: absolute;
+	top:360px;
+	left: 170px;
+	width: 100px;
+	height: 100px;
 
 }
 
-.hat:hover .mask-eye-left {
-  top: -10px;
-  height: 0;
-  width: 40px;
-  transition-duration: 0.7s, 1.2s;
+.left-thumb{
+	position: absolute;
+	top:50px;
+	left: 35px;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	background-color: #636854;
+border: solid 1px black;
+}
+
+.right-glove{
+	position: absolute;
+	top:15px;
+	left: 25px;
+	background-image: url("../images/rightglove.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 60px;
+	height: 50px;
+}
+
+.right-hand{
+	position: absolute;
+	top:45px;
+	right: 35px;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: #636854;
+	border: solid 1px black;
 
 }
 
-.hat:hover .mask-eye-rigth {
-  height: 0;
-  width: 40px;
-  top: -10px;
-  transition-duration: 0.7s, 1.2s;
+.right-thumb{
+	position: absolute;
+	top:50px;
+	right: 35px;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	background-color: #636854;
+	border: solid 1px black;
 
 }
 
-.hat:hover .smile {
-  opacity: 1;
-  transition-duration: 0.5s, 1.5s;
+.logo{
+	position: absolute;
+	top:380px;
+	left: 285px;
+	background-image: url("../images/M.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 75px;
+	height: 35px;
 }
 
-.mouth {
-
-  border-bottom: 2px solid black;
-  border-radius: 50%;
-  bottom: 60px;
-  height: 15px;
-  left: 170px;
-  position: absolute;
-  width: 50px;
-  transform: rotateZ(-210deg);
+.cape{
+	position: absolute;
+	top:340px;
+	left: 80px;
+	background-image: url("../images/cape.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 115px;
+	opacity: 0.8;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++fit*/
+.right-shoe{
+	top: 453px;
+	left: 210px;
+	position: absolute;
+	background-image: url("../images/rightshoe.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 130px;
+	height: 35px;
 }
 
-.smile {
-  opacity: 0.0;
-  border-bottom: 2px solid black;
-  border-radius: 50%;
-  bottom: 70px;
-  height: 25px;
-  left: 160px;
-  position: absolute;
-  width: 50px;
-  transform: rotateZ(-45deg);
-
-}
-
-.bufanda {
-  position: absolute;
-  top: 225px;
-  width: 240px;
-  height: 40px;
-  background-color: purple;
-  transform: rotateZ(-3deg);
-  border-radius: 25%;
-  box-shadow: 5px 5px 15px black;
-}
-
-.hat-left-bottom {
-  position: absolute;
-  top: 135px;
-  left: 20px;
-  height: 100px;
-  width: 25px;
-  border-radius: 50%;
-  background-color: purple;
-  transform: rotateZ(-28deg);
-  box-shadow: inset -5px -5px 5px black;
-}
-
-.hat-left {
-  position: absolute;
-  top: 90px;
-  left: -15px;
-  height: 30px;
-  width: 90px;
-  border-radius: 50%;
-  background-color: purple;
-  transform: rotateZ(-70deg);
-  box-shadow: inset 5px -5px 5px black;
-}
-
-.hat-right-bottom {
-  position: absolute;
-  top: 120px;
-  right: 20px;
-  height: 120px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: purple;
-  transform: rotateZ(20deg);
-  box-shadow: inset 5px -5px 5px black;
-}
-
-.hat-right {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  height: 120px;
-  width: 40px;
-  border-radius: 50%;
-  background-color: purple;
-  transform: rotateZ(-10deg);
-
-}
-
-.open-mouth {
-  opacity: 0;
-  background-color: black;
-  width: 20px;
-  height: 25px;
-  border-radius: 50%;
-  bottom: 70px;
-  left: 180px;
-  position: absolute;
-  transform: rotateZ(-35deg);
-
-}
-
-/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++body*/
-
-.misterion-body {
-  position: relative;
-  top: 70px;
-  margin: 0 auto;
-  width: 280px;
-  height: 120px;
-
-}
-
-.left-hand {
-  border: solid 1px black;
-  position: absolute;
-  top: 40px;
-  left: 10px;
-  background-color: #00e1a3;
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  animation-name: clap-left;
-  animation-iteration-count: 20;
-  animation-duration: 0.1s;
-  animation-fill-mode: reverse;
-  animation-delay: 0.6s;
-  animation-direction: alternate-reverse;
-  animation-play-state: play;
-}
-
-.left-thumb {
-  border: solid 1px black;
-  position: absolute;
-  top: 12px;
-  left: 22px;
-  background-color: #00e1a3;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-}
-
-.right-hand {
-  border: solid 1px black;
-  position: absolute;
-  top: 40px;
-  right: 5px;
-  background-color: #00e1a3;
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  animation-name: clap-right;
-  animation-iteration-count: 20;
-  animation-duration: 0.1s;
-  animation-fill-mode: reverse;
-  animation-delay: 0.6s;
-  animation-direction: alternate-reverse;
-  animation-play-state: play;
-}
-
-.right-thumb {
-  border: solid 1px black;
-  position: absolute;
-  top: 9px;
-  right: 22px;
-  background-color: #00e1a3;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-}
-
-@keyframes clap-right {
-  0% {
-    top: 35px;
-    right: 75px;
-  }
-
-  100% {
-    top: 30px;
-    right: 110px;
-  }
-}
-
-@keyframes clap-left {
-  0% {
-    top: 35px;
-    left: 75px;
-  }
-  100% {
-    top: 30px;
-    left: 102px;
-  }
+.left-shoe{
+	top: 453px;
+	left: 300px;
+	position: absolute;
+	background-image: url("../images/leftshoe.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 130px;
+	height: 35px;
 }
