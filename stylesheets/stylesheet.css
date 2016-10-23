@@ -6,21 +6,76 @@
 body {
 	background-image: url("../images/rain.gif");
 	height: 768px;
-background-size: cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .character {
 	position: relative;
-	top:150px;
-	width: 100%;
 	margin: 0 auto;
-/*	background-image: url("../images/Mysterion_2.png");*/
+	top: 464px;
+	width: 600px;
 	background-size: 400px;
 	height: 500px;
-	background-repeat: no-repeat;
-	background-position: 80px;
-	transform: scale();
+	/* background-color: #e1b692; */
+	animation-name: walk;
+	animation-duration: 8s;
+	animation-direction: normal;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+	animation-play-state: play;
+}
+
+@keyframes walk {
+	0% {
+		transform-origin: bottom;
+		transform: rotateZ(1deg);
+	}
+	10% {
+
+		transform: rotateZ(-1deg) scale(1.05);
+
+	}
+	20% {
+
+		transform: rotateZ(1deg) scale(1.1);
+
+	}
+	30% {
+
+		transform: rotateZ(-1deg) scale(1.15);
+
+	}
+	40% {
+
+		transform: rotateZ(1deg) scale(1.20);
+	}
+	50% {
+
+		transform: rotateZ(-1deg) scale(1.25);
+	}
+	60% {
+
+		transform: rotateZ(1deg) scale(1.30);
+	}
+	70% {
+
+		transform: rotateZ(-1deg) scale(1.35);
+	}
+	80% {
+
+		transform: rotateZ(1deg) scale(1.40);
+	}
+
+	90% {
+
+		transform: rotateZ(-1deg) scale(1.45);
+	}
+
+	100% {
+
+		transform: scale(1.5);
+	}
 }
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++top*/
@@ -36,6 +91,27 @@ background-size: cover;
 	background-repeat: no-repeat;
 	width: 150px;
 	height: 150px;
+
+	animation-name: bounce;
+	animation-duration: 0.05s;
+	animation-direction: alternate-reverse;
+	animation-fill-mode: both;
+	animation-iteration-count: 2000000;
+	animation-play-state: play;
+}
+
+@keyframes bounce {
+	0% {
+		top: 5px;
+		transform-origin: bottom;
+		transform: rotateZ(9deg);
+	}
+
+	100% {
+		top: 5px;
+		transform-origin: bottom;
+		transform: rotateZ(11deg);
+	}
 }
 
 .hat {
@@ -47,19 +123,22 @@ background-size: cover;
 	background-size: cover;
 	width: 330px;
 	height: 330px;
+	z-index: 1;
 }
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++face*/
-.face{
+.face {
 	position: absolute;
-	top:100px;
-	left:190px;
+	top: 100px;
+	left: 190px;
 	width: 270px;
 	height: 270px;
 	background-color: #e1b692;
 	border-radius: 50%;
+	z-index: -1;
 }
 
-.mask{
+.mask {
 	top: 110px;
 	left: 195px;
 	position: absolute;
@@ -68,6 +147,8 @@ background-size: cover;
 	background-size: cover;
 	width: 240px;
 	height: 200px;
+	z-index: -1;
+
 }
 
 .eyes {
@@ -102,6 +183,7 @@ background-size: cover;
 	transform: rotateZ(-30deg);
 	border: solid 2px black;
 	box-shadow: inset -3px -5px 5px black;
+
 }
 
 .left-iris {
@@ -124,18 +206,141 @@ background-size: cover;
 	border-radius: 50%;
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++arms*/
-.left-arm{
+.madeyes {
+	top: 170px;
+	left: 253px;
 	position: absolute;
-	top:360px;
+	background-image: url("../images/madeyes.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 150px;
+	height: 80px;
+	z-index: 1;
+	animation-name: wow;
+	animation-duration: 3s;
+	animation-delay: 4s;
+	animation-direction: normal;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+	animation-play-state: play;
+}
+
+@keyframes wow {
+	0% {
+
+	}
+	10% {
+		top: 130px;
+		transition-duration: 0.7s, 1.2s;
+	}
+	90% {
+		top: 130px;
+		transition-duration: 0.7s, 1.2s;
+	}
+	100% {
+		top: 170px;
+		transition-duration: 0.7s, 1.2s;
+	}
+}
+
+
+.madmouth {
+	top: 322px;
+	left: 307px;
+	position: absolute;
+	background-image: url("../images/madmouth.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 40px;
+	height: 9px;
+	animation-name: mad-mouth;
+	animation-duration: 3s;
+	animation-delay: 4s;
+	animation-direction: normal;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+	animation-play-state: play;
+}
+@keyframes mad-mouth {
+	0% {
+
+	}
+	10% {
+		left: 310px;
+		top:310px;
+		width: 35px;
+		height: 15px;
+		background-image: url("../images/openmouth.svg");
+	}
+
+	90% {
+		left: 310px;
+		top:310px;
+		width: 35px;
+		height: 15px;
+		background-image: url("../images/openmouth.svg");
+	}
+	100% {
+
+	}
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++arms*/
+.fat {
+	position: absolute;
+	top: 345px;
+	left: 205px;
+	background-image: url("../images/fat.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 240px;
+	height: 110px;
+	z-index: -1;
+}
+
+.belt {
+	position: absolute;
+	top: 421px;
+	left: 213px;
+	background-image: url("../images/belt.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 230px;
+	height: 25px;
+}
+
+.left-arm {
+	position: absolute;
+	top: 354px;
 	left: 380px;
 	width: 100px;
 	height: 100px;
+	animation-name: clap-left;
+	animation-iteration-count: 10;
+	animation-duration: 0.8s;
+	animation-fill-mode: both;
+	animation-direction: alternate-reverse;
+	animation-play-state: play;
 }
 
-.left-glove{
-position: absolute;
-	top:20px;
+.left-arm-top {
+	position: absolute;
+	top: 8px;
+	left: 25px;
+	width: 40px;
+	height: 40px;
+	background-color: #ab93a3;
+	transform: rotateZ(-25deg);
+	border: solid 1px black;
+	border-top: none;
+	border-bottom-right-radius: 65%;
+	border-top-right-radius: 5px;
+}
+
+.left-glove {
+	position: absolute;
+	top: 20px;
 	left: 20px;
 	background-image: url("../images/leftglove.svg");
 	background-size: cover;
@@ -144,9 +349,9 @@ position: absolute;
 	height: 50px;
 }
 
-.left-hand{
+.left-hand {
 	position: absolute;
-	top:45px;
+	top: 45px;
 	left: 35px;
 	width: 44px;
 	height: 44px;
@@ -156,40 +361,62 @@ position: absolute;
 	border: solid 1px black;
 }
 
-.right-arm{
+.right-arm {
 	position: absolute;
-	top:360px;
-	left: 170px;
+	top: 355px;
+	left: 165px;
 	width: 100px;
 	height: 100px;
+	animation-name: clap-right;
+	animation-iteration-count: 10;
+	animation-duration: 0.8s;
+	animation-fill-mode: both;
+	animation-direction: alternate-reverse;
+	animation-play-state: play;
+}
+
+.right-arm-top {
+	position: absolute;
+	top: 8px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	background-color: #ab93a3;
+	transform: rotateZ(25deg);
+	border: solid 1px black;
+	border-top: none;
+	border-bottom-left-radius: 65%;
+	border-top-left-radius: 5px;
+	z-index: -1;
 
 }
 
-.left-thumb{
+.left-thumb {
 	position: absolute;
-	top:50px;
+	top: 50px;
 	left: 35px;
 	width: 17px;
 	height: 17px;
 	border-radius: 50%;
 	background-color: #636854;
-border: solid 1px black;
+	border: solid 1px black;
 }
 
-.right-glove{
+.right-glove {
 	position: absolute;
-	top:15px;
+	top: 15px;
 	left: 25px;
 	background-image: url("../images/rightglove.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 60px;
 	height: 50px;
+
 }
 
-.right-hand{
+.right-hand {
 	position: absolute;
-	top:45px;
+	top: 45px;
 	right: 35px;
 	width: 44px;
 	height: 44px;
@@ -199,9 +426,9 @@ border: solid 1px black;
 
 }
 
-.right-thumb{
+.right-thumb {
 	position: absolute;
-	top:50px;
+	top: 50px;
 	right: 35px;
 	width: 17px;
 	height: 17px;
@@ -211,9 +438,38 @@ border: solid 1px black;
 
 }
 
-.logo{
+@keyframes clap-right {
+	0% {
+		top: 365px;
+		transform-origin: top;
+		transform: rotateZ(-20deg);
+	}
+
+	100% {
+		top: 360px;
+		transform-origin: top;
+		transform: rotateZ(-10deg);
+	}
+}
+
+@keyframes clap-left {
+	0% {
+		top: 360px;
+		left: 380px;
+		transform-origin: top;
+		transform: rotateZ(20deg);
+	}
+
+	100% {
+		top: 365px;
+		transform-origin: top;
+		transform: rotateZ(10deg);
+	}
+}
+
+.logo {
 	position: absolute;
-	top:380px;
+	top: 380px;
 	left: 285px;
 	background-image: url("../images/M.svg");
 	background-size: cover;
@@ -222,9 +478,9 @@ border: solid 1px black;
 	height: 35px;
 }
 
-.cape{
+.cape {
 	position: absolute;
-	top:340px;
+	top: 340px;
 	left: 80px;
 	background-image: url("../images/cape.svg");
 	background-size: cover;
@@ -232,10 +488,57 @@ border: solid 1px black;
 	width: 160px;
 	height: 115px;
 	opacity: 0.8;
+	z-index: -1;
+	animation-name: bounce-cape;
+	animation-duration: 0.05s;
+	animation-direction: alternate-reverse;
+	animation-fill-mode: both;
+	animation-iteration-count: 2000000;
+	animation-play-state: play;
 }
+
+@keyframes bounce-cape {
+	0% {
+		top: 370px;
+		left: 90px;
+		transform-origin: top;
+		transform: rotateZ(2deg);
+	}
+
+	100% {
+		top: 340px;
+		left: 110px;
+		transform-origin: top;
+		transform: rotateZ(11deg);
+	}
+}
+
+.underwear {
+	position: absolute;
+	top: 430px;
+	left: 215px;
+	background-image: url("../images/underwear.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 210px;
+	height: 35px;
+}
+
+.pants {
+	position: absolute;
+	top: 435px;
+	left: 230px;
+	z-index: -1;
+	background-image: url("../images/pants.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 35px;
+}
+
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++fit*/
-.right-shoe{
-	top: 453px;
+.right-shoe {
+	top: 448px;
 	left: 210px;
 	position: absolute;
 	background-image: url("../images/rightshoe.svg");
@@ -243,10 +546,27 @@ border: solid 1px black;
 	background-size: cover;
 	width: 130px;
 	height: 35px;
+	z-index: -1;
+	animation-name: walk-right;
+	animation-delay: 0.01s;
+	animation-duration: 0.8s;
+	animation-direction: alternate-reverse;
+	animation-fill-mode: both;
+	animation-iteration-count: 10;
+	animation-play-state: play;
 }
 
-.left-shoe{
-	top: 453px;
+@keyframes walk-right {
+	0% {
+		top: 448px;
+	}
+	100% {
+		top: 440px;
+	}
+}
+
+.left-shoe {
+	top: 448px;
 	left: 300px;
 	position: absolute;
 	background-image: url("../images/leftshoe.svg");
@@ -254,4 +574,20 @@ border: solid 1px black;
 	background-size: cover;
 	width: 130px;
 	height: 35px;
+	z-index: -1;
+	animation-name: walk-left;
+	animation-duration: 0.8s;
+	animation-direction: alternate-reverse;
+	animation-fill-mode: both;
+	animation-iteration-count: 15;
+	animation-play-state: play;
+}
+
+@keyframes walk-left {
+	0% {
+		top: 440px;
+	}
+	100% {
+		top: 448px;
+	}
 }
