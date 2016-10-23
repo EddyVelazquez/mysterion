@@ -579,7 +579,7 @@ body {
 	animation-duration: 0.8s;
 	animation-direction: alternate-reverse;
 	animation-fill-mode: both;
-	animation-iteration-count: 15;
+	animation-iteration-count: 10;
 	animation-play-state: play;
 }
 
